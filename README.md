@@ -17,9 +17,11 @@ The base case is the condition that checks to see if the condition you desired h
 
 <br>
 
- The base case within the example shown below,&nbsp;for the count_down function,&nbsp;is when nbr is less than 1.&nbsp;&nbsp;The recursive call is when the function calls itself,&nbsp;which adds to the recursice call stack.
+ The base case within the example shown in <sup>figure 1</sup>&nbsp;for the count_down function,&nbsp;is when nbr is less than 1.&nbsp;&nbsp;The recursive call is when the function calls itself,&nbsp;which adds to the recursive call stack.
 
 <br>
+
+<h5><em><div align="center">figure 1</div></em></h5>
 
 <div align="center">
         <img src="images/count_down.jpg" alt="View the count_down 
@@ -33,18 +35,34 @@ The base case is the condition that checks to see if the condition you desired h
 
 <br>
 
-The call stack is at the heart of the recursive function.&nbsp;&nbsp;It keeps track of each time the function is called.&nbsp;&nbsp;When the call stack hits a RETURN,&nbsp;it pops the current function off the stack and goes back to whichever function's now on top.&nbsp;&nbsp;So,&nbsp;when count_down(10) calls count_down(1),&nbsp;it's going to wait until count_down(1) ends before it can also end.&nbsp;&nbsp;Once count_down(1) ends,&nbsp;count_down(10) finishes its run.&nbsp;&nbsp;See sample output for the count_down(10) function below: 
+The call stack is at the heart of the recursive function.&nbsp;&nbsp;It keeps track of each time the function is called.&nbsp;&nbsp;When the call stack hits a RETURN,&nbsp;it pops the current function off the stack and goes back to whichever function is now on top of the stack.&nbsp;&nbsp;So,&nbsp;when count_down(10 -1) is called,&nbsp;it's going to be at the bottom of the call stack.&nbsp;&nbsp;The second function call will be placed upon the first and so on until the base case section is executed.&nbsp;&nbsp;Now,&nbsp;the last call to hit the stack will be the first to pop off.&nbsp;&nbsp;In this case it's the 9th function call,&nbsp; and then the 8th,&nbsp;down to the 1st.&nbsp;&nbsp;The final piece of the program prepends the inputted value,&nbsp;which in this case is 10,&nbsp;to the vector.&nbsp;&nbsp;View <sup>figure 2</sup> below: 
 
 <br>
 
-<div align="center">Countdown [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]</div>
+<h5><em><div align="justify">figure 2</div></em></h5>
+
+<h5><div align="justify">
+
+[] base case (1 -1)<br />
+[1\] 9th function call (2 -1)<br />
+[2, 1] 8th function call (3 -1)<br />
+[3, 2, 1] 7th function call (4 -1)<br />
+[4, 3, 2, 1] 6th function call (5 -1)<br />
+[5, 4, 3, 2, 1] 5th function call (6 -1)<br />
+[6, 5, 4, 3, 2, 1] 4th function call (7 -1)<br />
+[7, 6, 5, 4, 3, 2, 1] 3rd function call (8 -1)<br />
+[8, 7, 6, 5, 4, 3, 2, 1] 2nd function call (9 -1)<br />
+[9, 8, 7, 6, 5, 4, 3, 2, 1] 1st function call (10 -1)<br />
+
+[10,9,8,7,6,5,4,3,2,1] vec.insert(0, begin_num);<br />
+</div></h5>
 
 <br>
 
 Pros:
 <ol>
     <li>Recursion adds clarity and,&nbsp;sometimes,&nbsp;reduces the time needed to write and debug code,&nbsp;but,&nbsp;doesn't necessarily reduce space requirements or speed of execution.
-    <li>Reduces time complexity.&nbsp;&nbsp;Performs better in solving problems based on tree structures.
+    <li>Reduces time complexity.&nbsp;&nbsp;Performs better in solving problems based on tree data structures.
     <li>It is a unique way of implementing a variable number of nested loops/iterations,&nbsp;and,&nbsp;the only elegant way of implementing a big constant number of nested loops.
 </ol>
 
@@ -65,7 +83,7 @@ Thanks for reading and do reach out and let me know if you have any questions or
           width="30"
           height="20"
           border="0"
-        />
+        />&nbsp;&nbsp;The source code can be viewed in the&nbsp; [src](https://github.com/nagashi/recursion/blob/main/src/main.rs)&nbsp; folder for those unfamiliar with the Rust language.
 
 <br>
 <br>
@@ -90,5 +108,9 @@ Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in 'Recursion' by you, shall be licensed as MIT, without any additional terms or conditions.
 
 </p>
+<br>
+<h4>Reference inks:</h4>
 
-
+- [Recursion](https://en.wikipedia.org/wiki/Recursion)
+- [Tree Data Structure](https://en.wikipedia.org/wiki/Tree_(data_structure))
+- [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29)
