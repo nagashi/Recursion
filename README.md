@@ -43,7 +43,7 @@ The call stack is at the heart of the recursive function.&nbsp;&nbsp;It keeps tr
 
 <h5><div align="justify">
 
-[] base case (1 -1)<br />
+>>>>>>>>[] base case (1 -1)<br />
 [1\] 9th function call (2 -1)<br />
 [2, 1] 8th function call (3 -1)<br />
 [3, 2, 1] 7th function call (4 -1)<br />
@@ -54,7 +54,7 @@ The call stack is at the heart of the recursive function.&nbsp;&nbsp;It keeps tr
 [8, 7, 6, 5, 4, 3, 2, 1] 2nd function call (9 -1)<br />
 [9, 8, 7, 6, 5, 4, 3, 2, 1] 1st function call (10 -1)<br />
 
-[10,9,8,7,6,5,4,3,2,1] vec.insert(0, begin_num);<br />
+>>>>>>>>[10,9,8,7,6,5,4,3,2,1] vec.insert(0, begin_num);<br />
 </div></h5>
 
 <br>
